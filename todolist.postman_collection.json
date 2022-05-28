@@ -1,0 +1,839 @@
+{
+	"info": {
+		"_postman_id": "a5e562ee-30df-41da-a2eb-c81f965c8f0c",
+		"name": "todolist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11730979"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"june\",\n    \"email\" : \"june@gmail.com\",\n    \"password\" : \"12345678\",\n    \"confirmPassword\" : \"12345678\",\n    \"birthDate\" : \"1990-05-09\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"june\",\n    \"email\" : \"june@gmail.com\",\n    \"password\" : \"12345678\",\n    \"confirmPassword\" : \"12345678\",\n    \"birthDate\" : \"1990-05-09\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/api/users/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"113-gSqSEIi9RagGfO4rTdy6jO/GmLU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 02:14:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user created successfully\",\n    \"user\": {\n        \"id\": 3,\n        \"username\": \"june\",\n        \"email\": \"june@gmail.com\",\n        \"password\": \"$2a$10$.5FTlKtwEUy.5PDZHSlMJe4kjyy65eII/InhZOsWJbImjWOLWE65q\",\n        \"birthDate\": \"1990-05-09\",\n        \"updatedAt\": \"2022-05-22T02:14:51.742Z\",\n        \"createdAt\": \"2022-05-22T02:14:51.742Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n  \n    \"oldPassword\" : \"123456789\",\n    \"newPassword\" : \"123456789\",\n    \"confirmNewPassword\" : \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update user",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n  \n    \"oldPassword\" : \"123456789\",\n    \"newPassword\" : \"123456789\",\n    \"confirmNewPassword\" : \"123456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/api/users/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"users",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-INtjDrTCOZkKmyO/zzGGN1v/VUw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 05:55:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user updated successfully\",\n    \"result\": [\n        1\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"jan\",\n    \"password\" : \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"jan\",\n    \"password\" : \"123456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/api/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-jMTkybKhCmjRcVgwEpAirZ0o0QU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 06:04:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"login successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJqYW4iLCJpYXQiOjE2NTMxOTk0NDAsImV4cCI6MTY1MzIwMzA0MH0.-y87q2b6-WHZr2N1JH-A6HIutokYoPWeyk854XRKSIo\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "todos",
+			"item": [
+				{
+					"name": "create todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"surt\",\n    \"completed\": true,\n    \"dueDate\" : \"1990-09-09\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/todo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create todo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"surt\",\n    \"completed\": true,\n    \"dueDate\" : \"1990-09-09\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/api/todo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c7-xNU/vmG/HjVhkJAyw5WG7t3jGMY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 06:18:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"todo\": {\n        \"id\": 8,\n        \"title\": \"surt\",\n        \"completed\": true,\n        \"dueDate\": \"1990-09-09\",\n        \"userId\": 2,\n        \"updatedAt\": \"2022-05-22T06:18:26.371Z\",\n        \"createdAt\": \"2022-05-22T06:18:26.371Z\"\n    },\n    \"message\": \"todo created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update todo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"todoId\" : 6,\n    \"title\" : \"dinner\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/todo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update todo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"todoId\" : 6,\n    \"title\" : \"travel\",\n    \"completed\" : \"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/api/todo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-1D2HiJhpTayW8II+hzJyhRCwaao\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 06:20:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"todo updated successfully\",\n    \"updatedTodo\": {\n        \"title\": \"travel\",\n        \"completed\": \"true\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update todo Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/todo/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todo",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update todo Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/api/todo/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"todo",
+										"5"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-U32/6JlJ8bYatLTBgJ4+e+rG4rE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 06:18:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "get all todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/todo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all todo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/api/todo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-ux5O3T3mXHrctmARmTcAVRkYuuQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 06:17:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 5,\n        \"title\": \"math\",\n        \"completed\": false,\n        \"dueDate\": null,\n        \"createdAt\": \"2022-05-22T06:15:50.000Z\",\n        \"updatedAt\": \"2022-05-22T06:15:50.000Z\",\n        \"userId\": 2\n    },\n    {\n        \"id\": 6,\n        \"title\": \"game\",\n        \"completed\": true,\n        \"dueDate\": null,\n        \"createdAt\": \"2022-05-22T06:16:12.000Z\",\n        \"updatedAt\": \"2022-05-22T06:16:12.000Z\",\n        \"userId\": 2\n    },\n    {\n        \"id\": 7,\n        \"title\": \"game\",\n        \"completed\": true,\n        \"dueDate\": \"1990-05-09\",\n        \"createdAt\": \"2022-05-22T06:16:43.000Z\",\n        \"updatedAt\": \"2022-05-22T06:16:43.000Z\",\n        \"userId\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get todo by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/todo/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todo",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get todo by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/api/todo/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"todo",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-pSbZHARw654ZibqBUqMo5AIRvog\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 May 2022 06:18:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"title\": \"game\",\n    \"completed\": true,\n    \"dueDate\": null,\n    \"createdAt\": \"2022-05-22T06:16:12.000Z\",\n    \"updatedAt\": \"2022-05-22T06:16:12.000Z\",\n    \"userId\": 2\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/adadsadsasd",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"adadsadsasd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/api/adadsadsasd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"adadsadsasd"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-9KxFOLL6C+E5AVR3xZavfhbwbUo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 22 May 2022 06:18:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"resource not found on this sever\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
